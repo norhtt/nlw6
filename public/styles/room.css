@@ -1,0 +1,209 @@
+.content {
+    max-width: min(112rem, 90%); /*da pre    vilegio ao menor de acordo com o tamanho da tela*/
+    /*usado para n deixa os elementos encostando na parede*/
+}
+
+
+#room header {
+    width: 100%;
+    
+    display: flex;    /*distribue valores iguais entre os filhos na caixa*/  
+    align-items: center;    /*alinha inter na horizontal*/
+    justify-content: space-between;    /*alinha os intens na vertical no caso dado uma divisão dos butoens com o logo*/
+}
+
+
+/* trabalhando os buttons */
+#room header .buttons {
+    display: flex;
+     /*deixando os botões um do lado do outro*/
+}
+
+
+#room header .buttons .button:nth-child(1){
+    margin-right: .8rem;    /*botando a margem entre os botões*/
+    padding: 1.3rem 1.6rem;    /*botando a margem entre os botões*/
+    
+}
+
+
+#room header .buttons .button:nth-child(1) img{
+    margin-left: 1rem;
+    width: 2rem;
+    height: 2rem;
+     /*trabalhando a imagem e o conteudo do botão*/
+}
+
+
+#room header .buttons .button:nth-child(2){
+    padding: 1.3rem 3.2rem;
+}
+
+
+#room header .buttons .button:nth-child(2) img{
+    width: 2rem;
+    height: 2rem;
+     /*trabalhando a imagem e o conteudo do botão*/
+}
+
+
+/* QUESTION-FORM */
+
+#question-form h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    color: var(--black);
+    font-weight: 700;
+    line-height: 4.2rem;
+
+    margin-bottom: 2.4rem;
+}
+
+
+#question-form form {
+    border: .2rem solid var(--grey-blue);
+    padding: 1.6rem;
+    border: 0 .8rem .8rem .8rem;
+
+    margin-bottom: 1.6rem;  /*usado par adistanciar a a caixa form da outra */
+     /*trabalha a caixa que vai abrigar as outras caixas e elementos*/
+}
+
+
+#question-form form textarea{
+    resize: none; /*não permite a alterção de tamnaho da caixa na pagina*/
+    background: transparent;
+
+    width: 100%; /*para ele ocupar horizontalmente todo o espaço da caixa*/
+
+    outline: none; /*tirar as bordas de marcação da caixa*/
+}
+
+
+#question-form form textarea::placeholder{
+    color: var(--grey-blue);
+}
+
+
+#question-form form footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*trabalhou a caixa onde sera trablhada os elementos*/
+}
+
+#question-form form textarea > div{
+    display: flex;
+    align-items: center;
+    /*usado para centralizar o texto com a figura de cadeado*/
+
+    color: var(--icons-details);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    /*detalhes do texto*/
+}
+
+
+#question-form form textarea > div img {
+    margin-right: 0.9rem;
+}
+
+
+#question-form form footer button{
+    height: auto;
+    padding: .8rem 2.4rem;
+    line-height: 2.4rem;
+}
+
+
+/*---Questions---*/
+
+.question-wrapper{
+    background: var(--light-blue);
+    margin-bottom: .8rem;    /*dar espaço entre as caixas*/
+    border-radius: 0 .8rem .8rem .8rem;    /*lidando com as pontas da caixa*/
+    padding: 2.4rem;
+}
+
+
+.question-wrapper .question-content{
+    display: flex;
+    align-items: flex-start; /* trabalha com o alinhamento na horizontal, usado para alinhar o conteudo com o topo*/
+}
+
+
+.question-wrapper .question-content .user{
+    background: var(--blue);
+    clip-path: circle();
+    padding: 1.4rem;
+}
+
+
+.question-wrapper .question-content p{
+    margin-left: 1.6rem;
+    word-break: break-word;    /* usado para quebrar palavras muito grandes, para ela n quebrar o espaço de texto da caixa*/
+    display: flex;    
+    align-items: center;
+    min-height: 5.5rem;
+    /*trabalhando a distribução do texto a medida que ele ocupa e cresce na caixa*/
+}
+
+
+.question-wrapper .actions{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;    /*trabalha a posição da caixa a respeito da caixa em que ela esta */
+}
+
+
+.question-wrapper .actions > a{
+    display: flex;
+    align-items: center;
+    /*serve para alinhar o texto com as imagens*/
+}
+
+
+.question-wrapper .actions > a > img{
+    margin-right: .8rem;
+}
+
+
+.question-wrapper .actions > a + a {
+    margin-left: 2.4rem;
+    /*usado para n deixa margin sobrando sem uso no delete*/
+}
+
+
+/*---Questions Read---*/
+.question-wrapper.read{
+    background: var(--grey-medium);
+}
+
+
+.question-wrapper.read .question-content .user{
+    background: var(--grey-blue)
+}
+
+
+/*---No Questions---*/
+.no-questions{
+    text-align: center;
+    margin-top: 5.2rem;
+}
+.no-questions img{
+    max-width: 100%;
+    margin-bottom: 1.2rem;
+}
+.no-questions p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.no-questions p + p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-top: 1.3rem;
+    line-height: 1.9rem;
+}
